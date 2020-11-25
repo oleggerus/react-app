@@ -1,4 +1,8 @@
-import ScrollableTabs from "./Components/ScrollableTabs";
+import React from "react";
+import Lesson1 from "./components/Lesson1";
+import ScrollableTabs from "./components/ScrollableTabs";
+
+import "./App.css";
 
 function App() {
   return (
@@ -6,6 +10,9 @@ function App() {
       <header className="App-header">
         <ScrollableTabs></ScrollableTabs>
       </header>
+      <main>
+        <Lesson1 />
+      </main>
     </div>
   );
 }

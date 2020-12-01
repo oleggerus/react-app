@@ -14,6 +14,9 @@ import ThumbUp from "@material-ui/icons/ThumbUp";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 
+import Lesson1 from "./Lesson1";
+import Lesson2 from "./Lesson2";
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -75,8 +78,8 @@ function ScrollableTabs() {
           textColor="primary"
           aria-label="scrollable force tabs example"
         >
-          <Tab label="Item One" icon={<PhoneIcon />} {...a11yProps(0)} />
-          <Tab label="Item Two" icon={<FavoriteIcon />} {...a11yProps(1)} />
+          <Tab label="Lesson1" icon={<PhoneIcon />} {...a11yProps(0)} />
+          <Tab label="Lesson2" icon={<FavoriteIcon />} {...a11yProps(1)} />
           <Tab label="Item Three" icon={<PersonPinIcon />} {...a11yProps(2)} />
           <Tab label="Item Four" icon={<HelpIcon />} {...a11yProps(3)} />
           <Tab label="Item Five" icon={<ShoppingBasket />} {...a11yProps(4)} />
@@ -87,10 +90,10 @@ function ScrollableTabs() {
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
-        Item One
+        <Lesson1 />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+        <Lesson2 />
       </TabPanel>
       <TabPanel value={value} index={2}>
         Item Three

@@ -16,6 +16,7 @@ import Box from "@material-ui/core/Box";
 
 import Lesson1 from "./Lesson1";
 import Lesson2 from "./Lesson2";
+import Lesson3 from "./Lesson3";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -80,7 +81,7 @@ function ScrollableTabs() {
         >
           <Tab label="Lesson1" icon={<PhoneIcon />} {...a11yProps(0)} />
           <Tab label="Lesson2" icon={<FavoriteIcon />} {...a11yProps(1)} />
-          <Tab label="Item Three" icon={<PersonPinIcon />} {...a11yProps(2)} />
+          <Tab label="Lesson3" icon={<PersonPinIcon />} {...a11yProps(2)} />
           <Tab label="Item Four" icon={<HelpIcon />} {...a11yProps(3)} />
           <Tab label="Item Five" icon={<ShoppingBasket />} {...a11yProps(4)} />
           <Tab label="Item Six" icon={<ThumbDown />} {...a11yProps(5)} />
@@ -96,7 +97,7 @@ function ScrollableTabs() {
         <Lesson2 />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Item Three
+        <Lesson3 />
       </TabPanel>
       <TabPanel value={value} index={3}>
         Item Four

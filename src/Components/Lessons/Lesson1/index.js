@@ -29,9 +29,8 @@ const withGreenColor = WrappedComponent => {
   const WithGreenColor = props => (
     <WrappedComponent {...props} color={"green"} />
   );
-  WithGreenColor.displayName = `withGreenColor${
-    WrappedComponent.displayName ?? WrappedComponent.name ?? "Component"
-  }`;
+  WithGreenColor.displayName = `withGreenColor${WrappedComponent.displayName ?? WrappedComponent.name ?? "Component"
+    }`;
 
   return WithGreenColor;
 };
@@ -65,7 +64,7 @@ TextElement.propTypes = {
 
 const Main = () => {
   return (
-    <div className={"lesson1"}>
+    <div className={"lesson1 main"}>
       <Card text={"Hello!"} />
       <GreenCard text={"Hello mr. Green!"} color={"red"} />
       <CanBeGreenCard text={"Hello mr. Green!"} />

@@ -14,9 +14,9 @@ import ThumbUp from "@material-ui/icons/ThumbUp";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 
-import Lesson1 from "./Lesson1";
-import Lesson2 from "./Lesson2";
-import Lesson3 from "./Lesson3";
+import Lesson1 from "./Lessons/Lesson1";
+import Lesson2 from "./Lessons/Lesson2";
+import Lesson3 from "./Lessons/Lesson3";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;

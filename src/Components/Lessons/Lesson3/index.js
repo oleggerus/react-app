@@ -13,8 +13,8 @@ const WithForwardRef = ({
   return <div>WithForwardRef</div>;
 };
 
-const WorkingWithChildrenAndAnimals = ({ children }) => {};
+const WorkingWithChildrenAndAnimals = ({ children }) => { };
 
-const Main = () => {};
+const Main = () => { return (<div className='main'></div>) };
 
 export default Main;

@@ -61,7 +61,7 @@ CorrectComponent.defaultProps = {
   defaultExpanded: false,
 };
 
-const TestComponent = ({}) => {
+const TestComponent = ({ }) => {
   const [expanded, setExpanded] = useState(false);
   return (
     <div>
@@ -78,7 +78,7 @@ const TestComponent = ({}) => {
 
 const Main = () => {
   return (
-    <div className={"lesson2"}>
+    <div className={"lesson2 main"}>
       <StatelessComponent text={"Hello"} extraText={"there!"} />
       <StatelessComponent expanded text={"Hello"} extraText={"there!"} />
 

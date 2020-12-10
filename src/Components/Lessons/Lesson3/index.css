@@ -1,0 +1,14 @@
+.child + .child {
+  margin-top: 10px;
+}
+
+.child.good {
+  color: green;
+}
+.child.bad {
+  color: red;
+}
+
+.mouse {
+  border: 1px solid black;
+}

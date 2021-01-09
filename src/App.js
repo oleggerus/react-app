@@ -1,37 +1,71 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Link } from "react-router-dom";
+import React, { useState } from "react";
+import "antd/dist/antd.css";
+import "./index.css";
+import { Layout, Menu, Breadcrumb } from "antd";
+import {
+  DesktopOutlined,
+  PieChartOutlined,
+  FileOutlined,
+  TeamOutlined,
+  UserOutlined,
+} from "@ant-design/icons";
 
-import routes from "./routes";
-import RouteWithSubRoutes from "./routeWithSubRoutes";
-import "./App.css";
+const { Header, Content, Footer, Sider } = Layout;
+const { SubMenu } = Menu;
 
-function App() {
+const BaseLayout = () => {
+  const [collapsed, setCollapsed] = useState(false);
+
+  const onCollapse = (collapsed) => {
+    console.log(collapsed);
+    setCollapsed(collapsed);
+  };
+
   return (
-    <div style={{ display: "flex" }}>
-      <Router>
-        <div>
-          <ul>
-            <li>
-              <Link to="/oleh">Oleh</Link>
-            </li>
-            <li>
-              <Link to="/anton">Anton</Link>
-            </li>
-            <li>
-              <Link to="/lessons">Lessons</Link>
-            </li>
-          </ul>
-        </div>
-        <div style={{ width: "100%" }}>
-          <Switch>
-            {routes.map((route, i) => (
-              <RouteWithSubRoutes key={i} {...route} />
-            ))}
-          </Switch>
-        </div>
-      </Router>
-    </div>
+    <Layout style={{ minHeight: "100vh" }}>
+      <Sider collapsible collapsed={collapsed} onCollapse={onCollapse}>
+        <div className="logo" />
+        <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
+          <Menu.Item key="1" icon={<PieChartOutlined />}>
+            Oleh
+          </Menu.Item>
+          <Menu.Item key="2" icon={<DesktopOutlined />}>
+            Anton
+          </Menu.Item>
+          <SubMenu key="sub1" icon={<UserOutlined />} title="User">
+            <Menu.Item key="3">Lesson 1</Menu.Item>
+            <Menu.Item key="4">Lesson 2</Menu.Item>
+            <Menu.Item key="5">Lesson 3</Menu.Item>
+          </SubMenu>
+          <SubMenu key="sub2" icon={<TeamOutlined />} title="Team">
+            <Menu.Item key="6">Team 1</Menu.Item>
+            <Menu.Item key="8">Team 2</Menu.Item>
+          </SubMenu>
+          <Menu.Item key="9" icon={<FileOutlined />}>
+            Files
+          </Menu.Item>
+        </Menu>
+      </Sider>
+      <Layout className="site-layout">
+        <Header className="site-layout-background" style={{ padding: 0 }} />
+        <Content style={{ margin: "0 16px" }}>
+          <Breadcrumb style={{ margin: "16px 0" }}>
+            <Breadcrumb.Item>User</Breadcrumb.Item>
+            <Breadcrumb.Item>Bill</Breadcrumb.Item>
+          </Breadcrumb>
+          <div
+            className="site-layout-background"
+            style={{ padding: 24, minHeight: 360 }}
+          >
+            Bill is a cat.
+          </div>
+        </Content>
+        <Footer style={{ textAlign: "center" }}>
+          Ant Design ©2018 Created by Ant UED
+        </Footer>
+      </Layout>
+    </Layout>
   );
-}
+};
 
-export default App;
+export default BaseLayout;

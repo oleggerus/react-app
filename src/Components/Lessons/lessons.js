@@ -24,6 +24,9 @@ const Lessons = ({ routes }) => {
         <li>
           <Link to="/lessons/lesson5">Lesson 5</Link>
         </li>
+        <li>
+          <Link to="/lessons/lesson6">Lesson 6</Link>
+        </li>
       </ul>
 
       <Switch>

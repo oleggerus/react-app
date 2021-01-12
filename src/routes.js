@@ -6,6 +6,7 @@ import Lesson2 from "./Components/Lessons/Lesson2";
 import Lesson3 from "./Components/Lessons/Lesson3";
 import Lesson4 from "./Components/Lessons/Lesson4";
 import Lesson5 from "./Components/Lessons/Lesson5";
+import Lesson6 from "./Components/Lessons/Lesson6";
 
 import Anton from "./Components/PersonalInfo/anton";
 import Oleh from "./Components/PersonalInfo/oleh";
@@ -42,6 +43,10 @@ const routes = [
       {
         path: "/lessons/lesson5",
         component: Lesson5,
+      },
+      {
+        path: "/lessons/lesson6",
+        component: Lesson6,
       },
     ],
   },

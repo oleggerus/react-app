@@ -10,6 +10,7 @@ import Lesson2 from "../Components/Lessons/Lesson2";
 import Lesson3 from "../Components/Lessons/Lesson3";
 import Lesson4 from "../Components/Lessons/Lesson4";
 import Lesson5 from "../Components/Lessons/Lesson5";
+import Lesson6 from "../Components/Lessons/Lesson6";
 
 const { Content } = Layout;
 
@@ -50,7 +51,7 @@ const AppContent = ({ itemToDisplay }) => {
         <Lesson5 />
       </div>
     ),
-    // 8: <div><Lesson6/></div>,
+    8: <div><Lesson6/></div>,
     // 9: <div><Lesson7/></div>,
     19: <div>Empty</div>,
   };

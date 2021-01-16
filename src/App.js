@@ -1,37 +1,32 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Link } from "react-router-dom";
+import React, { useState } from "react";
+import "antd/dist/antd.css";
+import "./index.css";
+import { Layout } from "antd";
 
-import routes from "./routes";
-import RouteWithSubRoutes from "./routeWithSubRoutes";
-import "./App.css";
+import LeftMenu from "./Layout/LeftMenu";
+import AppContent from "./Layout/Content";
+const { Header, Footer } = Layout;
 
-function App() {
+const BaseLayout = () => {
+  const [displayItem, updateDisplayItem] = useState(1);
+  const handleMenuClick = (menu) => {
+    updateDisplayItem(menu.key);
+  };
+
   return (
-    <div style={{ display: "flex" }}>
-      <Router>
-        <div>
-          <ul>
-            <li>
-              <Link to="/oleh">Oleh</Link>
-            </li>
-            <li>
-              <Link to="/anton">Anton</Link>
-            </li>
-            <li>
-              <Link to="/lessons">Lessons</Link>
-            </li>
-          </ul>
-        </div>
-        <div style={{ width: "100%" }}>
-          <Switch>
-            {routes.map((route, i) => (
-              <RouteWithSubRoutes key={i} {...route} />
-            ))}
-          </Switch>
-        </div>
-      </Router>
-    </div>
-  );
-}
+    <Layout style={{ minHeight: "100vh" }}>
+      <LeftMenu handleClick={handleMenuClick} />
+      <Layout className="site-layout">
+        <Header className="site-layout-background" style={{ padding: 0 }} />
 
-export default App;
+        <AppContent itemToDisplay={displayItem} />
+
+        <Footer style={{ textAlign: "center" }}>
+          Ant Design ©2018 Created by Ant UED
+        </Footer>
+      </Layout>
+    </Layout>
+  );
+};
+
+export default BaseLayout;

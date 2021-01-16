@@ -2,6 +2,14 @@
   --main-there-color: red;
 }
 
+.site-layout .site-layout-background {
+  background: #fff;
+}
+
+[data-theme="dark"] .site-layout .site-layout-background {
+  background: #141414;
+}
+
 .App main {
   display: flex;
   justify-content: center;
@@ -10,8 +18,8 @@
 
 .main {
   margin-left: 10%;
-  padding:1px 16px;
-  height:1000px
+  padding: 1px 16px;
+  height: 1000px;
 }
 
 ul {
@@ -33,7 +41,7 @@ li a {
 }
 
 li a.active {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
 }
 
